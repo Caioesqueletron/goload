@@ -1,0 +1,25 @@
+{
+  "name": "users-api-mixed-traffic",
+  "requests": [
+    {
+      "name": "list-users",
+      "method": "GET",
+      "url": "https://api.example.com/users",
+      "weight": 7
+    },
+    {
+      "name": "get-user",
+      "method": "GET",
+      "url": "https://api.example.com/users/42",
+      "weight": 2
+    },
+    {
+      "name": "create-user",
+      "method": "POST",
+      "url": "https://api.example.com/users",
+      "headers": { "Content-Type": "application/json" },
+      "body": "{\"name\":\"Ada Lovelace\",\"email\":\"ada@example.com\"}",
+      "weight": 1
+    }
+  ]
+}
